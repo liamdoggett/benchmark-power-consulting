@@ -4,7 +4,7 @@
   "description": "Benchmark Power Consulting — modern executive consulting website",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "build": "mkdir -p dist/css dist/js dist/assets && npx tailwindcss -i ./src/input.css -o ./dist/css/styles.css --minify && cp index.html dist/ && cp -r js/* dist/js/ && cp -r assets/* dist/assets/",
     "build:standalone": "./tailwindcss-macos-arm64 -i ./src/input.css -o ./css/styles.css --minify",
     "serve": "python3 -m http.server 8080"
   },
